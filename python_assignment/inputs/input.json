@@ -1,0 +1,6 @@
+[
+    {"id": 1, "title": "Record A", "create": "2023-01-01"},
+    {"id": 2, "title": "Record B", "create": "2023-01-02"},
+    {"id": 1, "title": "Record A Updated", "create": "2023-01-03"},
+    {"id": 3, "title": "Record C", "create": "2023-01-01"}
+]
