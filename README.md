@@ -45,6 +45,11 @@ To run the main script, use the following command structure:
    python -m src <command> <input_file> [additional_arguments]
    ```
 
+When running the main script in the command line, I assume that all the values in the input JSON
+file are strings just to not make the parser complex.
+If you decide to run the functions directly or via tests, they can handle different data types.
+The structure of the input those functions assume is `List[Dict[str, Any]]`
+
 ### Available Commands:
 
 - **filter_unique_records:** Filter unique records by 'id'.

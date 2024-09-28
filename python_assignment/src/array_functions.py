@@ -106,3 +106,41 @@ def transform_to_key_value(arr: Optional[ArrayType]) -> Dict[str, int]:
     except KeyError as e:
         raise KeyError(
             f"Missing 'title' or 'id' key in one or more dictionaries: {e}") from e
+
+
+def main():
+    # Sample data for testing
+    sample_data = [
+        {'id': 1, 'title': 'First', 'create': '2024-01-01'},
+        {'id': 2, 'title': 'Second', 'create': '2024-01-02'},
+        {'id': 1, 'title': 'First Updated', 'create': '2024-01-03'},
+        {'id': 3, 'title': 'Third', 'create': '2024-01-01'},
+        {'id': 2, 'title': 'Second Updated', 'create': '2024-01-02'}
+    ]
+
+    print("Original Data:")
+    print(sample_data)
+
+    # Testing filter_unique_records
+    unique_records = filter_unique_records(sample_data)
+    print("\nUnique Records by 'id':")
+    print(unique_records)
+
+    # Testing sort_array_by_key
+    sorted_records = sort_array_by_key(sample_data, 'create')
+    print("\nSorted Records by 'create':")
+    print(sorted_records)
+
+    # Testing filter_by_condition
+    filtered_records = filter_by_condition(sample_data, 'id', 1)
+    print("\nFiltered Records by condition (id == 1):")
+    print(filtered_records)
+
+    # Testing transform_to_key_value
+    key_value_map = transform_to_key_value(sample_data)
+    print("\nTransformed to Key-Value Map (title -> id):")
+    print(key_value_map)
+
+
+if __name__ == "__main__":
+    main()
