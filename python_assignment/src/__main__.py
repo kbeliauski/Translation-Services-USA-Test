@@ -3,11 +3,6 @@ import json
 from src import *
 import os
 
-
-# Import necessary modules
-import os
-
-
 def main():
     parser = argparse.ArgumentParser(
         description="Run array functions from the terminal.")
